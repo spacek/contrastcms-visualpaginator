@@ -1,27 +1,11 @@
 <?php
 
-/**
- * Nette Framework Extras
- *
- * This source file is subject to the New BSD License.
- *
- * For more information please see http://extras.nettephp.com
- *
- * @copyright  Copyright (c) 2009 David Grudl
- * @license    New BSD License
- * @link       http://extras.nettephp.com
- * @package    Nette Extras
- * @version    $Id: VisualPaginator.php 4 2009-07-14 15:22:02Z david@grudl.com $
- */
+namespace ContrastCms\VisualPaginator;
 
-/**
- * Visual paginator control.
- *
- * @author     David Grudl
- * @copyright  Copyright (c) 2009 David Grudl
- * @package    Nette Extras
- */
-class VisualPaginator extends Nette\Application\UI\Control
+use Nette\Application\UI\Control;
+use Nette\Utils\Paginator;
+
+class VisualPaginator extends Control
 {
 	/** @var Paginator */
 	private $paginator;
@@ -29,15 +13,10 @@ class VisualPaginator extends Nette\Application\UI\Control
 	/** @persistent */
 	public $page = 1;
 
-
-
-	/**
-	 * @return Nette\Paginator
-	 */
 	public function getPaginator()
 	{
 		if (!$this->paginator) {
-			$this->paginator = new Nette\Utils\Paginator;
+			$this->paginator = new Paginator();
 		}
 		return $this->paginator;
 	}
