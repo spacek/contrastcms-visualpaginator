@@ -1,7 +1,7 @@
 {
   "name": "contrastcms/visualpaginator",
   "homepage": "https://github.com/spacek/contrastcms-visualpaginator",
-  "license": "MIT License",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/spacek/contrastcms-visualpaginator.git"
